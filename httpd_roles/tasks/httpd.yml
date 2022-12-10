@@ -1,0 +1,14 @@
+---
+- name: install the "{{ packages }}" 
+  yum: 
+    name: "{{ packages }}" 
+    state: present
+- name: start "{{ services }}" 
+  service: 
+    name: "{{ services }}" 
+    state: started  
+    enabled: true 
+- name: create the index file
+  template: 
+    src: "{{ src_path }}"
+    dest: "{{ dest_path }}" 

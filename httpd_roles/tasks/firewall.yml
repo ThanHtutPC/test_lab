@@ -1,0 +1,14 @@
+---
+- name: install the firewall
+  yum: 
+    name: firewalld 
+    state: present
+- firewalld:
+    service: https 
+    state: enabled 
+    permanent: true 
+    immediate: true 
+- service:
+    name: firewalld 
+    state: restarted 
+    enabled: true

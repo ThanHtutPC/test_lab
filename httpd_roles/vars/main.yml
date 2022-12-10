@@ -1,0 +1,7 @@
+---
+# vars file for httpd_roles
+
+packages: httpd 
+services: httpd 
+src_path: ../files/index.j2
+dest_path: /var/www/html/index.html

@@ -1,0 +1,6 @@
+---
+# tasks file for httpd_roles
+
+- include_tasks: httpd.yml
+- include_tasks: firewall.yml
+
